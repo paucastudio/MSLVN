@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #000000;
+  --background: #0d0d0d;
   --foreground: #ffffff;
 }
 
@@ -20,19 +20,20 @@
     flex-direction: column;
   }
   h1 {
-    font-size: clamp(4rem, 12vw, 8rem);
+    font-size: clamp(2rem, 12vw, 10rem);
     line-height: 0.85;
-    font-weight: 550;
-    letter-spacing: -0.3rem;
+    font-weight: 400;
+    letter-spacing: -0.5rem;
+    text-transform: uppercase;
   }
   h2 {
-    font-size: clamp(2rem, 8vw, 3.5rem);
-    line-height: 1.17;
+    font-size: clamp(1rem, 8vw, 2rem);
+    line-height: 1.12;
     font-weight: 550;
-    letter-spacing: -0.1rem;
+    letter-spacing: -0.02rem;
   }
   h3 {
-    font-size: clamp(0.75rem, 6vw, 1rem);
+    font-size: clamp(0.75rem, 6vw, 0.9rem);
     line-height: 1;
     font-weight: 550;
     letter-spacing: -0.05rem;
@@ -44,4 +45,9 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-overused);
+}
+.border-line {
+  height: 1px;
+  width: 100%;
+  background-color: var(--foreground);
 }
