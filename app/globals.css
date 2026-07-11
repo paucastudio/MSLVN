@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 :root {
   --background: #0d0d0d;
@@ -50,4 +51,9 @@ body {
   height: 1px;
   width: 100%;
   background-color: var(--foreground);
+}
+
+.dark {
+  --background: oklch(100% 0.00011 271.152);
+  --foreground: oklch(0% 0 0);
 }

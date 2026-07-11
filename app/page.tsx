@@ -49,13 +49,13 @@ export default function Home() {
 
   return (
     <main ref={container}>
-      <section className="h-screen overflow-hidden flex flex-col px-5 sm:px-10 sm:gap-32 gap-12 sm:py-36 py-24 sm:pb-4 justify-end">
-        <div className="flex flex-col items-end  w-full h-fit">
-          <div className="sm:grid sm:grid-cols-6 flex flex-col items-start gap-8 w-full h-fit ">
+      <section className="flex flex-col justify-end h-screen gap-12 px-5 py-24 overflow-hidden sm:px-10 sm:gap-32 sm:py-36 sm:pb-4">
+        <div className="flex flex-col items-end w-full h-fit">
+          <div className="flex flex-col items-start w-full gap-8 sm:grid sm:grid-cols-6">
             <div className="flex flex-col gap-4">
               <h3 ref={h2Ref}>001</h3>
             </div>
-            <div className="w-full flex justify-center col-start-3 sm:justify-start overflow-hidden ">
+            <div className="flex justify-center w-full col-start-3 overflow-hidden sm:justify-start ">
               <div className="relative w-full max-w-[300px] aspect-3/4">
                 <Image
                   ref={imageRef}
@@ -80,39 +80,39 @@ export default function Home() {
           </div>
           <div className="flex flex-col w-full">
             <div className="border-line" />
-
             <div className="grid grid-cols-3">
               <h1 className="col-start-2">INDEPENDENT</h1>
             </div>
-
             <div className="border-line" />
-
             <div className="grid grid-cols-6">
               <h1>Designer</h1>
             </div>
-
             <div className="border-line" />
-
             <div className="flex justify-end">
               <h1>DEVELOPER</h1>
             </div>
-
             <div className="border-line" />
           </div>
         </div>
       </section>
-      <section className="overflow-hidden flex flex-col gap-16 py-40 px-5 sm:px-10">
+      <section className="flex flex-col gap-16 px-5 py-40 overflow-hidden sm:px-10">
         {/* Top section with grid layout */}
-        <div className="sm:grid sm:grid-cols-3  flex flex-col items-center gap-4">
+        <div className="flex flex-col items-center gap-4 sm:grid sm:grid-cols-3">
           <h3>002</h3>
           <h3>Selected works.</h3>
           <h3 className="flex items-end">/26</h3>
         </div>
 
         {/* Bottom section with grid layout */}
-        <div className="flex flex-col items-end gap-4">
-          <div className="flex flex-col bg-foreground/5 w-full p-64 ">
-            <div className="relative aspect-16/10 gap-2">
+        <div className="flex flex-col items-end gap-4 sm:grid sm:grid-cols-6">
+          <div className="relative flex flex-col items-center justify-center w-full h-full col-span-2 overflow-hidden aspect-16/10 bg-foreground/3">
+            {/* <Image
+              src="/olafbg.png"
+              fill
+              className="absolute inset-0 object-cover opacity-40"
+              alt="hero image"
+            /> */}
+            <div className="relative aspect-16/10 w-[60%] gap-2">
               <Image
                 src="/olaf.png"
                 fill
@@ -121,6 +121,41 @@ export default function Home() {
               />
             </div>
           </div>
+          <div className="relative flex flex-col items-center justify-center w-full h-full col-span-2 overflow-hidden aspect-16/10 bg-foreground/3">
+            {/* <Image
+              src="/olaf2bg.png"
+              fill
+              className="absolute inset-0 object-cover opacity-40"
+              alt="hero image"
+            /> */}
+            <div className="relative aspect-16/10 w-[60%] gap-2">
+              <Image
+                src="/olaf.png"
+                fill
+                className="object-cover"
+                alt="hero image"
+              />
+            </div>
+          </div>
+          <div className="relative flex flex-col items-center justify-center w-full h-full col-span-2 overflow-hidden aspect-16/10 bg-foreground/3">
+            {/* <Image
+              src="/olaf2bg.png"
+              fill
+              className="absolute inset-0 object-cover opacity-40"
+              alt="hero image"
+            /> */}
+            <div className="relative aspect-16/10 w-[60%] gap-2">
+              <Image
+                src="/olaf.png"
+                fill
+                className="object-cover"
+                alt="hero image"
+              />
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col items-end h-screen gap-4 sm:grid sm:grid-cols-3 ">
+          <h1>02</h1>
         </div>
       </section>
     </main>
