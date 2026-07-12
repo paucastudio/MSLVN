@@ -81,7 +81,7 @@ export default function Home() {
           <div className="flex flex-col w-full">
             <div className="border-line" />
             <div className="grid grid-cols-3">
-              <h1 className="col-start-2">INDEPENDENT</h1>
+              <h1 className="col-start-2">Independent</h1>
             </div>
             <div className="border-line" />
             <div className="grid grid-cols-6">
@@ -89,7 +89,7 @@ export default function Home() {
             </div>
             <div className="border-line" />
             <div className="flex justify-end">
-              <h1>DEVELOPER</h1>
+              <h1>Developer</h1>
             </div>
             <div className="border-line" />
           </div>
@@ -105,29 +105,8 @@ export default function Home() {
 
         {/* Bottom section with grid layout */}
         <div className="flex flex-col items-end gap-4 sm:grid sm:grid-cols-6">
-          <div className="relative flex flex-col items-center justify-center w-full h-full col-span-2 overflow-hidden aspect-4/3 bg-foreground/3">
-            {/* <Image
-              src="/olafbg.png"
-              fill
-              className="absolute inset-0 object-cover opacity-40"
-              alt="hero image"
-            /> */}
-            <div className="relative aspect-16/10 w-[60%] gap-2">
-              <Image
-                src="/northface.png"
-                fill
-                className="object-cover"
-                alt="hero image"
-              />
-            </div>
-          </div>
+          <h3 className="col-span-2">22/26</h3>
           <div className="relative flex flex-col items-center justify-center w-full h-full col-span-2 overflow-hidden aspect-16/10 bg-foreground/3">
-            {/* <Image
-              src="/olaf2bg.png"
-              fill
-              className="absolute inset-0 object-cover opacity-40"
-              alt="hero image"
-            /> */}
             <div className="relative aspect-16/10 w-[60%] gap-2">
               <Image
                 src="/olaf.png"
@@ -138,12 +117,6 @@ export default function Home() {
             </div>
           </div>
           <div className="relative flex flex-col items-center justify-center w-full h-full col-span-2 overflow-hidden aspect-16/10 bg-foreground/3">
-            {/* <Image
-              src="/olaf2bg.png"
-              fill
-              className="absolute inset-0 object-cover opacity-40"
-              alt="hero image"
-            /> */}
             <div className="relative aspect-16/10 w-[60%] gap-2">
               <Image
                 src="/olaf.png"
