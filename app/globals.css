@@ -40,6 +40,9 @@
     letter-spacing: -0.05rem;
     text-transform: uppercase;
   }
+  button:not(:disabled) {
+    cursor: pointer;
+  }
 }
 
 body {

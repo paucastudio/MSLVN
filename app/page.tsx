@@ -105,7 +105,7 @@ export default function Home() {
 
         {/* Bottom section with grid layout */}
         <div className="flex flex-col items-end gap-4 sm:grid sm:grid-cols-6">
-          <div className="relative flex flex-col items-center justify-center w-full h-full col-span-2 overflow-hidden aspect-16/10 bg-foreground/3">
+          <div className="relative flex flex-col items-center justify-center w-full h-full col-span-2 overflow-hidden aspect-4/3 bg-foreground/3">
             {/* <Image
               src="/olafbg.png"
               fill
@@ -114,7 +114,7 @@ export default function Home() {
             /> */}
             <div className="relative aspect-16/10 w-[60%] gap-2">
               <Image
-                src="/olaf.png"
+                src="/northface.png"
                 fill
                 className="object-cover"
                 alt="hero image"
