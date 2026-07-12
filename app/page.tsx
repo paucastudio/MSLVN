@@ -127,8 +127,55 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col items-end h-screen gap-4 sm:grid sm:grid-cols-3 ">
-          <h1>02</h1>
+      </section>
+      <section className="flex flex-col gap-16 px-5 py-40 overflow-hidden sm:px-10">
+        {/* Top section with grid layout */}
+        <div className="flex flex-col items-center gap-4 sm:grid sm:grid-cols-3">
+          <h3>003</h3>
+          <h3>Process</h3>
+          <h3 className="flex justify-end">Read more</h3>
+        </div>
+
+        {/* Bottom section with grid layout */}
+        <div className="flex flex-col items-start gap-4">
+          <div className="flex flex-col items-end gap-4 sm:grid sm:grid-cols-6">
+            <h1>Define</h1>
+            <div className="relative col-span-1 col-start-3 aspect-3/4">
+              <Image
+                src="/define.png"
+                fill
+                className="object-cover"
+                alt="define process image"
+              />
+            </div>
+            <div className="flex flex-col">
+              <h3 ref={h2Ref}>
+                Independent designer and developer based in Rotterdam with an
+                obsession for simplicity. I make complex things simple and
+                beautiful, and I love to create digital experiences that are
+                both functional and aesthetically pleasing.
+              </h3>
+            </div>
+          </div>
+          <div className="flex flex-col items-end gap-4 sm:grid sm:grid-cols-6">
+            <h1>Design</h1>
+            <div className="relative col-span-1 col-start-3 aspect-3/4">
+              <Image
+                src="/portrait3.png"
+                fill
+                className="object-cover"
+                alt="define process image"
+              />
+            </div>
+            <div className="flex flex-col">
+              <h3 ref={h2Ref}>
+                Independent designer and developer based in Rotterdam with an
+                obsession for simplicity. I make complex things simple and
+                beautiful, and I love to create digital experiences that are
+                both functional and aesthetically pleasing.
+              </h3>
+            </div>
+          </div>
         </div>
       </section>
     </main>

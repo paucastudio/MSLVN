@@ -31,57 +31,53 @@ export default function Navbar() {
       </div>
 
       {/* Bottom section with navigation links */}
-      <div className="grid items-end flex-1 min-h-0 grid-cols-6 gap-8 px-5 sm:px-10">
-        <div className="flex flex-col col-span-4 gap-4">
-          <Link
-            className="overflow-hidden"
-            href="/"
-            onClick={() => setIsMenuOpen(false)}
+
+      <div className="flex flex-col justify-end flex-1 min-h-0 gap-4 px-5 sm:px-10">
+        <Link
+          className="grid grid-cols-6 overflow-hidden"
+          href="/"
+          onClick={() => setIsMenuOpen(false)}
+        >
+          <div
+            className={cn(
+              "col-span-6 grid grid-cols-6 transition-transform duration-500 ease-in-out",
+              isMenuOpen ? "translate-y-0 delay-500" : "translate-y-full",
+            )}
           >
-            <h1
-              className={cn(
-                "transition-all duration-500 ease-in-out",
-                isMenuOpen
-                  ? "translate-y-0 delay-500"
-                  : "translate-y-full  delay-0",
-              )}
-            >
-              About
-            </h1>
-          </Link>
-          <Link
-            className="overflow-hidden"
-            href="/"
-            onClick={() => setIsMenuOpen(false)}
+            <h1>01</h1>
+            <h1 className="col-start-3">Work</h1>
+          </div>
+        </Link>
+        <Link
+          className="grid grid-cols-6 overflow-hidden"
+          href="/"
+          onClick={() => setIsMenuOpen(false)}
+        >
+          <div
+            className={cn(
+              "col-span-6 grid grid-cols-6 transition-transform duration-500 ease-in-out",
+              isMenuOpen ? "translate-y-0 delay-500" : "translate-y-full",
+            )}
           >
-            <h1
-              className={cn(
-                "transition-all duration-500 ease-in-out",
-                isMenuOpen
-                  ? "translate-y-0 delay-500"
-                  : "translate-y-full delay-0",
-              )}
-            >
-              Blog
-            </h1>
-          </Link>
-          <Link
-            className="overflow-hidden"
-            href="/"
-            onClick={() => setIsMenuOpen(false)}
+            <h1>02</h1>
+            <h1 className="col-start-3">Work</h1>
+          </div>
+        </Link>
+        <Link
+          className="grid grid-cols-6 overflow-hidden"
+          href="/"
+          onClick={() => setIsMenuOpen(false)}
+        >
+          <div
+            className={cn(
+              "col-span-6 grid grid-cols-6 transition-transform duration-500 ease-in-out",
+              isMenuOpen ? "translate-y-0 delay-500" : "translate-y-full",
+            )}
           >
-            <h1
-              className={cn(
-                "transition-all duration-500 ease-in-out",
-                isMenuOpen
-                  ? "translate-y-0 delay-500"
-                  : "translate-y-full delay-0",
-              )}
-            >
-              Work
-            </h1>
-          </Link>
-        </div>
+            <h1>03</h1>
+            <h1 className="col-start-3">Work</h1>
+          </div>
+        </Link>
       </div>
     </nav>
   );
