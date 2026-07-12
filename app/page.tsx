@@ -148,13 +148,14 @@ export default function Home() {
                 alt="define process image"
               />
             </div>
-            <div className="flex flex-col">
-              <h3 ref={h2Ref}>
+            <div className="flex flex-col justify-between h-full">
+              <h3 ref={h2Ref}>01</h3>
+              <p ref={h2Ref}>
                 Independent designer and developer based in Rotterdam with an
                 obsession for simplicity. I make complex things simple and
                 beautiful, and I love to create digital experiences that are
                 both functional and aesthetically pleasing.
-              </h3>
+              </p>
             </div>
           </div>
           <div className="flex flex-col items-end gap-4 sm:grid sm:grid-cols-6">
@@ -168,12 +169,12 @@ export default function Home() {
               />
             </div>
             <div className="flex flex-col">
-              <h3 ref={h2Ref}>
+              <p ref={h2Ref}>
                 Independent designer and developer based in Rotterdam with an
                 obsession for simplicity. I make complex things simple and
                 beautiful, and I love to create digital experiences that are
                 both functional and aesthetically pleasing.
-              </h3>
+              </p>
             </div>
           </div>
         </div>
