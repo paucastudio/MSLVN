@@ -148,7 +148,7 @@ export default function Home() {
               <h3>A</h3>
               <h1>Define</h1>
             </div>
-            <div className="relative col-span-1 col-start-3 aspect-3/4">
+            <div className="relative w-full col-span-1 col-start-3 aspect-3/4">
               <Image
                 src="/define.png"
                 fill
@@ -185,7 +185,7 @@ export default function Home() {
               <h3>B</h3>
               <h1>Design</h1>
             </div>
-            <div className="relative col-span-1 col-start-3 aspect-3/4">
+            <div className="relative w-full col-span-1 col-start-3 aspect-3/4">
               <Image
                 src="/portrait3.png"
                 fill
