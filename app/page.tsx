@@ -41,6 +41,17 @@ export default function Home() {
           delay: 0.5,
         },
       );
+      gsap.utils.toArray(".border-line").forEach((el) => {
+        gsap.from(el as Element, {
+          width: "0%",
+          duration: 1.5,
+          ease: "power1.out",
+          stagger: 0.1,
+          scrollTrigger: {
+            trigger: el as Element,
+          },
+        });
+      });
     },
     {
       scope: container,
@@ -52,10 +63,7 @@ export default function Home() {
       <section className="flex flex-col justify-end h-screen gap-12 px-5 py-24 overflow-hidden sm:px-10 sm:gap-32 sm:py-36 sm:pb-4">
         <div className="flex flex-col items-end w-full h-fit">
           <div className="flex flex-col items-start w-full gap-8 sm:grid sm:grid-cols-6">
-            <div className="flex flex-col gap-4">
-              <h3 ref={h2Ref}>001</h3>
-            </div>
-            <div className="flex justify-center w-full col-start-3 overflow-hidden sm:justify-start ">
+            <div className="flex justify-center w-full overflow-hidden sm:justify-start ">
               <div className="relative w-full max-w-[300px] aspect-3/4">
                 <Image
                   ref={imageRef}
@@ -66,13 +74,13 @@ export default function Home() {
                 />
               </div>
             </div>
-            <div className="flex flex-col gap-4">
-              <h3 ref={h2Ref}>
+            <div className="flex flex-col col-start-3 gap-4">
+              <p ref={h2Ref}>
                 Independent designer and developer based in Rotterdam with an
                 obsession for simplicity. I make complex things simple and
                 beautiful, and I love to create digital experiences that are
                 both functional and aesthetically pleasing.
-              </h3>
+              </p>
             </div>
             <h3 className="w-full text-right sm:col-start-6 sm:justify-self-end">
               2026
@@ -106,17 +114,14 @@ export default function Home() {
         {/* Bottom section with grid layout */}
         <div className="flex flex-col items-end gap-4 sm:grid sm:grid-cols-6">
           <h3 className="col-span-2">22/26</h3>
-          <div className="relative flex flex-col items-center justify-center w-full h-full col-span-2 overflow-hidden aspect-16/10 bg-foreground/3">
-            <div className="relative aspect-16/10 w-[60%] gap-2">
-              <Image
-                src="/olaf.png"
-                fill
-                className="object-cover"
-                alt="hero image"
-              />
-            </div>
-          </div>
-          <div className="relative flex flex-col items-center justify-center w-full h-full col-span-2 overflow-hidden aspect-16/10 bg-foreground/3">
+          <div className="relative flex flex-col items-center justify-center w-full h-full col-span-4 overflow-hidden aspect-16/10 bg-foreground/3">
+            <Image
+              ref={imageRef}
+              src="/portrait2.png"
+              fill
+              className="absolute inset-0 object-cover object-center"
+              alt="hero image"
+            />
             <div className="relative aspect-16/10 w-[60%] gap-2">
               <Image
                 src="/olaf.png"
@@ -130,16 +135,22 @@ export default function Home() {
       </section>
       <section className="flex flex-col gap-16 px-5 py-40 overflow-hidden sm:px-10">
         {/* Top section with grid layout */}
-        <div className="flex flex-col items-center gap-4 sm:grid sm:grid-cols-3">
+        <div className="grid items-center grid-cols-1 gap-4 sm:grid sm:grid-cols-3">
           <h3>003</h3>
           <h3>Process</h3>
           <h3 className="flex justify-end">Read more</h3>
         </div>
 
         {/* Bottom section with grid layout */}
-        <div className="flex flex-col items-start gap-4">
-          <div className="flex flex-col items-end gap-4 sm:grid sm:grid-cols-6">
-            <h1>Define</h1>
+        <div className="grid grid-cols-6 gap-y-4">
+          {" "}
+          {/* parent grid defines the tracks once */}
+          {/* Row 1 — still a single grouped component */}
+          <div className="grid items-stretch col-span-6 gap-4 grid-cols-subgrid">
+            <div className="flex flex-col justify-between col-span-2">
+              <h3>A</h3>
+              <h1>Define</h1>
+            </div>
             <div className="relative col-span-1 col-start-3 aspect-3/4">
               <Image
                 src="/define.png"
@@ -148,35 +159,59 @@ export default function Home() {
                 alt="define process image"
               />
             </div>
-            <div className="flex flex-col justify-between h-full">
-              <h3 ref={h2Ref}>01</h3>
-              <p ref={h2Ref}>
-                Independent designer and developer based in Rotterdam with an
-                obsession for simplicity. I make complex things simple and
-                beautiful, and I love to create digital experiences that are
-                both functional and aesthetically pleasing.
+            <div className="flex flex-col justify-between col-span-1">
+              <p>
+                We define the problem and constraints for each project. A clear
+                understanding of the challenge is essential for effective
+                solution development.
               </p>
             </div>
+
+            <div className="flex flex-col items-end justify-between col-span-1 col-start-6">
+              <h3>Capabilities</h3>
+              <ul className="flex flex-col items-end">
+                <li className="flex justify-between gap-2">
+                  <h3>Discovery workshop</h3>
+                </li>
+                <li className="flex justify-between gap-2">
+                  <h3>Research</h3>
+                </li>
+                <li className="flex justify-between gap-2">
+                  <h3>Competitive analysis</h3>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div className="flex flex-col items-end gap-4 sm:grid sm:grid-cols-6">
-            <h1>Design</h1>
+          {/* Row 2 — separate component, same tracks */}
+          <div className="grid items-stretch col-span-6 gap-4 grid-cols-subgrid">
+            <div className="flex flex-col justify-between col-span-2">
+              <h3>B</h3>
+              <h1>Design</h1>
+            </div>
             <div className="relative col-span-1 col-start-3 aspect-3/4">
               <Image
                 src="/portrait3.png"
                 fill
                 className="object-cover"
-                alt="define process image"
+                alt="design process image"
               />
             </div>
-            <div className="flex flex-col">
-              <p ref={h2Ref}>
-                Independent designer and developer based in Rotterdam with an
-                obsession for simplicity. I make complex things simple and
-                beautiful, and I love to create digital experiences that are
-                both functional and aesthetically pleasing.
+            <div className="flex flex-col col-span-1">
+              <p>
+                We design each project with a focus on user experience and
+                functionality. My goal is to create intuitive and visually
+                appealing interfaces that enhance the user's interaction with
+                the product.
               </p>
             </div>
           </div>
+        </div>
+      </section>
+      <section className="flex flex-col h-screen px-5 py-40 overflow-hidden sm:px-10">
+        <div className="grid items-center grid-cols-1 gap-4 sm:grid sm:grid-cols-3">
+          <h3>004</h3>
+          <h3>Thoughts</h3>
+          <h3 className="flex justify-end">Read more</h3>
         </div>
       </section>
     </main>

@@ -16,7 +16,7 @@ export default function Navbar() {
       )}
     >
       {/* Top section with logo and menu toggle button */}
-      <div className="grid items-center h-16 grid-cols-6 gap-8 px-5 sm:px-10 shrink-0">
+      <div className="grid items-center h-16 grid-cols-6 gap-4 px-5 sm:px-10 shrink-0">
         <Link href="/">
           <h3>Mslvn</h3>
         </Link>
