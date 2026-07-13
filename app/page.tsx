@@ -115,13 +115,13 @@ export default function Home() {
         <div className="flex flex-col items-end gap-4 sm:grid sm:grid-cols-6">
           <h3 className="col-span-2">22/26</h3>
           <div className="relative flex flex-col items-center justify-center w-full h-full col-span-4 overflow-hidden aspect-16/10 bg-foreground/3">
-            <Image
+            {/* <Image
               ref={imageRef}
               src="/portrait2.png"
               fill
               className="absolute inset-0 object-cover object-center"
               alt="hero image"
-            />
+            /> */}
             <div className="relative aspect-16/10 w-[60%] gap-2">
               <Image
                 src="/olaf.png"
@@ -143,9 +143,6 @@ export default function Home() {
 
         {/* Bottom section with grid layout */}
         <div className="grid grid-cols-6 gap-y-4">
-          {" "}
-          {/* parent grid defines the tracks once */}
-          {/* Row 1 — still a single grouped component */}
           <div className="grid items-stretch col-span-6 gap-4 grid-cols-subgrid">
             <div className="flex flex-col justify-between col-span-2">
               <h3>A</h3>
